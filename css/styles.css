@@ -1,0 +1,344 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "Voces-Regular";
+    src: url(../fonts/Voces-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: Poppins-Regular;
+    src: url("../fonts/Poppins-Regular.otf") format("opentype");
+}
+
+p,
+ul,
+a,
+span,
+b,
+strong,
+hgroup,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Poppins-Regular";
+    padding: 0;
+    margin: 0;
+}
+
+body::-webkit-scrollbar-track {
+    border-radius: 10px;
+    margin: 0px 0;
+    background-color: transparent;
+}
+
+body::-webkit-scrollbar {
+    width: 0px;
+    background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+.medveda-header {
+    padding-top: 76px;
+}
+
+.medveda-header .medveda-navbar {
+    background-color: #FCE1E6 !important;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.medveda-header .medveda-navbar .medveda-navbar-collapse .medveda-navbar-nav {
+    justify-content: center;
+    width: 100%;
+    gap: 30px;
+}
+
+.medveda-header .medveda-brand-logo {
+    width: 250px;
+    height: 50px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #000000 !important;
+    font-weight: 500;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #000000 !important;
+    font-weight: 600;
+}
+.navbar-light .navbar-nav .nav-link.active {
+    color: #000000 !important;
+    font-weight: 600 !important;
+    border-bottom: 1px solid #000 !important;
+}
+
+.carousel-caption {
+    bottom: 0rem !important;
+    color: #000000 !important;
+    z-index: 10;
+}
+
+.carousel-control-prev-icon,  .carousel-control-next-icon{
+    background-color: #000000 !important;
+    border-radius: 100%;
+}
+
+
+/* med veda landing page about section css start from here */
+#medveda-about-us-page .medveda-landing-about-block{
+    background: #fff;
+    padding: 40px 40px 40px 40px !important;
+}
+#medveda-about-us-page .medveda-bg-pink{
+    background-color: #FCE0E6;
+    padding: 0 20px;
+}
+.medveda-landing-about-block{
+    background: #FCE1E6;
+    padding: 40px 40px 40px 40px !important;
+}
+.medveda-landing-about-block .medveda-landing-about-header{
+    font-size: 40px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 40px 0;
+    color: #000;
+}
+.medveda-about-right-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.medveda-landing-about-block .medveda-about-block{
+    display: flex;
+    }
+
+    .medveda-about-block .medveda-about-right .medveda-about-right-img img{
+        width: 60%;
+    }
+
+    .medveda-about-left{
+        padding: 0 80px;
+    }
+
+    .medveda-about-para{
+        padding: 40px 0 0 0;
+    }
+    .ourteam .section-header{
+        font-size: 40px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 0 40px 0;
+        color: #000;
+    }
+    .medveda-bg-pink{
+        background-color: #FCE0E6;
+        padding: 0 20px;
+    }
+
+    .ourteam{
+        padding-bottom: 40px;
+    }
+
+    .medveda-card-tile-block{
+        border: 2px dashed #FCE0E6;
+        padding: 10px 10px;
+        border-radius: 6px;
+    }
+
+    .medveda-card-tile-img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+    }
+
+    .medveda-card-tile-block h5{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0;
+        margin: 0;
+    }
+
+    .medveda-card-tile-block .medveda-card-btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    .medveda-card-para{
+        word-break: break-word;
+        min-height: 82px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        padding: 5px 0;
+        margin: 0;
+    }
+
+    .medveda-card-tile-block .medveda-card-btn .btn-dark:hover {
+        opacity: 0.8;
+}
+
+/* contact us page css start from here */
+#medveda-contact-us-page .medveda-contact-us-block {
+    background: #fff;
+    padding: 40px 40px 40px 40px !important;
+}
+
+#medveda-contact-us-page .medveda-contact-us-header .medveda-bg-pink {
+    background-color: #FCE0E6;
+    padding: 0 20px;
+}
+
+#medveda-contact-us-page .medveda-contact-us-block .medveda-contact-us-header {
+    font-size: 40px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 40px 0;
+    color: #000;
+}
+#medveda-contact-us-page .medveda-contact-us-block .medveda-contact-us-form .form-send-block{
+    display: flex;
+    justify-content: center
+}
+#medveda-contact-us-page .medveda-contact-us-block .medveda-contact-us-form .form-send-block .btn-primary{
+    border-radius: 50px;
+    padding: 0.375rem 2rem;
+    color: #000;
+    background-color: #FCE1E6;
+    border-color: #FCE1E6;
+    font-weight: 600;
+}
+#medveda-contact-us-page .medveda-contact-us-block .medveda-contact-us-form .text-area-height{
+    resize: none;
+}
+
+/* events section start from here */
+.medveda-events {
+    padding-bottom: 40px;
+}
+.medveda-events .medveda-bg-pink{
+    background-color: #FCE0E6;
+    padding: 0 20px;
+}
+
+.medveda-events .section-header {
+    font-size: 40px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0 40px 0;
+    color: #000;
+}
+
+.medveda-events .card {
+    border: 1px solid #000;
+    padding: 8px 8px;
+}
+
+.medveda-events .card .card-text{
+    word-break: break-word;
+    min-height: 82px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    padding: 5px 0;
+}
+
+
+/* footer styles are start from here */
+footer .footer_above {
+    padding-top: 50px;
+    background-color: #FCE1E6 !important;
+    color: #000 !important;
+}
+
+footer .footer-col {
+    margin-bottom: 50px;
+}
+
+footer h3 {
+    margin-bottom: 30px;
+    color: #000 !important;
+}
+
+footer p {
+    color: #000 !important;
+    margin: 0;
+}
+
+.list-inline {
+    padding-left: 0;
+    margin-left: -5px;
+    list-style: none;
+}
+
+.list-inline>li {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.btn-outline {
+    margin-top: 25px;
+    border: solid 2px #fff;
+    font-size: 20px;
+    color: #000 !important;
+    background: 0 0;
+    transition: all .3s ease-in-out;
+}
+
+.btn-social {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #000;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 20px;
+    line-height: 45px;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: #2a1e5c;
+}
+
+footer .footer_below {
+    padding: 10px 0;
+    background-color: #fce1e6ab;
+}
+
+footer .target-a .btn-for-get-in-touch {
+    padding: 1em 0;
+}
+
+/* footer styles are start from here */
