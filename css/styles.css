@@ -172,6 +172,13 @@ body::-webkit-scrollbar-thumb {
     
     }
 
+    .medveda-card-tile-img img{
+        width: 200px;
+        height: 200px;
+        border-radius: 100px;
+    
+    }
+
     .medveda-card-tile-block h5{
         display: flex;
         align-items: center;
@@ -189,8 +196,9 @@ body::-webkit-scrollbar-thumb {
     }
 
     .medveda-card-para{
+        font-size: 14px;
         word-break: break-word;
-        min-height: 82px;
+        min-height: 72px;
         display: -webkit-box;
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
@@ -342,3 +350,11 @@ footer .target-a .btn-for-get-in-touch {
 }
 
 /* footer styles are start from here */
+
+/* modal styles are start from here */
+
+.medveda-member-modal .modal-dialog .modal-content .modal-body{
+    max-height: 500px;
+    overflow-y: scroll;
+    height: auto;
+}
