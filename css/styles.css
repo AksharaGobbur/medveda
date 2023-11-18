@@ -370,6 +370,7 @@ footer .footer-col .footer-useful-links-ul{
 
 footer .footer-col .footer-useful-links-ul li p a.nav-link{
     color: #404040;
+    padding: 0.5rem 0.5rem;
  }
 
 footer h3 {
