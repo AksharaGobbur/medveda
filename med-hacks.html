@@ -241,6 +241,91 @@ setInterval(updateCountdown, 1000);
 // Initial call to display the countdown immediately
 updateCountdown();
 </script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Med Veda - Med Hacks</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!-- Your existing stylesheets and scripts -->
+    <!-- Add your FAQ section styles -->
+    <style>
+        /* Style for FAQ section */
+        .faq-section {
+            padding: 50px 0;
+            text-align: left;
+        }
+
+        .accordion {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .accordion-item {
+            margin-bottom: 15px;
+        }
+
+        .accordion-button {
+            width: 100%;
+            text-align: left;
+            background-color: #f0f0f0;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .accordion-body {
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Your existing HTML content -->
+    <!-- ... -->
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="accordion">
+                <!-- FAQ Items -->
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="question1">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#answer1" aria-expanded="true" aria-controls="answer1">
+                            Question: What age group can be a part of this hackathon?
+                        </button>
+                    </h3>
+                    <div id="answer1" class="accordion-collapse collapse show" aria-labelledby="question1" data-bs-parent=".accordion">
+                        <div class="accordion-body">
+                            Answer: MedHacks welcomes high school and middle school students to participate.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more FAQ items following the same structure -->
+                
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="question2">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#answer2" aria-expanded="true" aria-controls="answer2">
+                            Question: What do we need to get?
+                        </button>
+                    </h3>
+                    <div id="answer2" class="accordion-collapse collapse" aria-labelledby="question2" data-bs-parent=".accordion">
+                        <div class="accordion-body">
+                            Answer: Participants need to register online and bring personal devices like laptops, tablets, or smartphones to work on their projects during the hackathon.
+                        </div>
+                    </div>
+                </div>
+    </section>
+
+
+</body>
+</html>
 
                         <div class="row">
                             <div class="col-12">
