@@ -192,7 +192,24 @@
                             </div>
                         </div>
 
-<div id="countdown"></div>
+<div id="countdown" class="countdown-container"></div>
+<style>
+/* CSS styles for countdown */
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.countdown-container div {
+    margin: 0 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+</style>
 <script>
 // Set the date and time of the event (year, month (0-11), day, hour, minute, second)
 const eventDate = new Date('2024-01-27T12:00:00');
@@ -224,6 +241,7 @@ setInterval(updateCountdown, 1000);
 // Initial call to display the countdown immediately
 updateCountdown();
 </script>
+
                         <div class="row">
                             <div class="col-12">
                                 <p class="medveda-about-para">
