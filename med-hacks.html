@@ -188,12 +188,46 @@
 
     <p><strong>Please note</strong> that all final explanations and end products, regardless of the chosen project category, must be presented through slideshow presentations, ensuring a comprehensive understanding of the proposed ideas or solutions.</p>
 
-                     
+
                             </div>
                         </div>
+
+<div id="countdown"></div>
+<script>
+// Set the date and time of the event (year, month (0-11), day, hour, minute, second)
+const eventDate = new Date('2024-01-27T12:00:00');
+
+function updateCountdown() {
+    const currentDate = new Date();
+    const timeLeft = eventDate - currentDate;
+
+    if (timeLeft <= 0) {
+        document.getElementById('countdown').innerHTML = 'The event has started!';
+    } else {
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+        document.getElementById('countdown').innerHTML = `
+            <div>${days} days</div>
+            <div>${hours} hours</div>
+            <div>${minutes} minutes</div>
+            <div>${seconds} seconds</div>
+        `;
+    }
+}
+
+// Update the countdown every second
+setInterval(updateCountdown, 1000);
+
+// Initial call to display the countdown immediately
+updateCountdown();
+</script>
                         <div class="row">
                             <div class="col-12">
                                 <p class="medveda-about-para">
+
 
                                 </p>
                             </div>
