@@ -241,43 +241,116 @@ updateCountdown();
 
     <p><strong>Please note</strong> that all final explanations and end products, regardless of the chosen project category, must be presented through slideshow presentations, ensuring a comprehensive understanding of the proposed ideas or solutions.</p>
 
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>MedHacks FAQs</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Frequently Asked Questions</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Additional styles for the FAQ section */
+        .faq-section {
+            padding: 50px 0;
+            text-align: left;
+        }
+    </style>
 </head>
 <body>
-    <div class="faq-container">
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-item">
-            <h3 class="faq-question">1. What age group can be a part of this hackathon?</h3>
-            <p class="faq-answer">MedHacks welcomes high school and middle school students to participate.</p>
-        </div>
-        <div class="faq-item">
-            <h3 class="faq-question">2. What do we need to get?</h3>
-            <p class="faq-answer">Participants need to register online and bring personal devices like laptops, tablets, or smartphones to work on their projects during the hackathon.</p>
-        </div>
-        <div class="faq-item">
-            <h3 class="faq-question">3. When and where is the event?</h3>
-            <p class="faq-answer">The event will be held on January 27th, 2024, from 12:30 PM to 6:30 PM at the Heritage Park Community Center, located at 14301 Yale Ave &, Walnut Ave, Irvine, CA 92604.</p>
-        </div>
-        <div class="faq-item">
-            <h3 class="faq-question">4. I am a beginner. Can I still participate?</h3>
-            <p class="faq-answer">Absolutely! MedHacks encourages participants of all skill levels, including beginners, to join and learn while contributing innovative ideas.</p>
-        </div>
-        <div class="faq-item">
-            <h3 class="faq-question">5. What is the maximum number of participants in a team? Can I go solo?</h3>
-            <p class="faq-answer">Teams can have a maximum of 4 members. You can participate solo.</p>
-        </div>
-        <div class="faq-item">
-            <h3 class="faq-question">6. I want to be a sponsor. Where do I contact?</h3>
-            <p class="faq-answer">If interested in becoming a sponsor for MedHacks, please reach out via email to <a href="mailto:medvedaorg@gmail.com">medvedaorg@gmail.com</a> for further details and sponsorship opportunities.</p>
-        </div>
-    </div>
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
 
-    <script src="script.js"></script>
+            <div class="accordion" id="accordionExample">
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="question1">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer1" aria-expanded="false" aria-controls="answer1">
+                            What age group can be a part of this hackathon?
+                        </button>
+                    </h3>
+                    <div id="answer1" class="accordion-collapse collapse" aria-labelledby="question1" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            MedHacks welcomes high school and middle school students to participate.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="question2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer2" aria-expanded="false" aria-controls="answer2">
+                            What do we need to get?
+                        </button>
+                    </h3>
+                    <div id="answer2" class="accordion-collapse collapse" aria-labelledby="question2" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Participants need to register online and bring personal devices like laptops, tablets, or smartphones to work on their projects during the hackathon.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="question3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer3" aria-expanded="false" aria-controls="answer3">
+                            When and where is the event?
+                        </button>
+                    </h3>
+                    <div id="answer3" class="accordion-collapse collapse" aria-labelledby="question3" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            The event will be held on January 27th, 2024, from 12:30 PM to 6:30 PM at the Heritage Park Community Center, located at 14301 Yale Ave &, Walnut Ave, Irvine, CA 92604.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="question4">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer4" aria-expanded="false" aria-controls="answer4">
+                            I am a beginner. Can I still participate?
+                        </button>
+                    </h3>
+                    <div id="answer4" class="accordion-collapse collapse" aria-labelledby="question4" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Absolutely! MedHacks encourages participants of all skill levels, including beginners, to join and learn while contributing innovative ideas.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="question5">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer5" aria-expanded="false" aria-controls="answer5">
+                            What is the maximum number of participants in a team? Can I go solo?
+                        </button>
+                    </h3>
+                    <div id="answer5" class="accordion-collapse collapse" aria-labelledby="question5" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Teams can have a maximum of 4 members. You can participate solo.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="question6">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer6" aria-expanded="false" aria-controls="answer6">
+                            I want to be a sponsor. Where do I contact?
+                        </button>
+                    </h3>
+                    <div id="answer6" class="accordion-collapse collapse" aria-labelledby="question6" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            If interested in becoming a sponsor for MedHacks, please reach out via email to <a href="mailto:medvedaorg@gmail.com">medvedaorg@gmail.com</a> for further details and sponsorship opportunities.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Add more questions and answers using the same structure -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS CDN (Required for the accordion functionality) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
 
                         <div class="row">
