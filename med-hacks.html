@@ -144,99 +144,64 @@
 </html>
      </li>
  </ul>  
-
-<div id="countdown" class="countdown-container"></div>
-<style>
-/* CSS styles for countdown */
-.countdown-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    margin-top: 20px;
-}
-
-.countdown-container div {
-    margin: 0 10px;
-    padding: 10px;
-    background-color: #f0f0f0;
-    border-radius: 5px;
-}
-</style>
-<script>
-const eventDate = new Date('2024-01-27T12:00:00');
-
-function updateCountdown() {
-    const currentDate = new Date();
-    const timeLeft = eventDate - currentDate;
-
-    if (timeLeft <= 0) {
-        document.getElementById('countdown').innerHTML = 'The event has started!';
-    } else {
-        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-        document.getElementById('countdown').innerHTML = `
-            <div>${days} days</div>
-            <div>${hours} hours</div>
-            <div>${minutes} minutes</div>
-            <div>${seconds} seconds</div>
-        `;
-    }
-}
-
-// Update the countdown every second
-setInterval(updateCountdown, 1000);
-
-// Initial call to display the countdown immediately
-updateCountdown();
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<body>
-    <div class="container">
-        <div class="medveda-about-left">
-            <p class="medveda-about-para medveda-heading-para">
-                Medical Innovation Hackathon and Healthcare Expo
-            </p>
-            <p class="medveda-about-para text-center font-weight-bold">
-                <b>An event by Med Veda Inc. in partnership with YAT</b>
-            </p>
-        </div>
+    <title>Countdown Timer</title>
+    <style>
+        /* CSS styles for countdown */
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            margin-top: 20px;
+        }
 
-        <div class="text-center">
-            <div class="row">
-                <div class="col-12">
-                    <p class="medveda-about-para">
-                        Are you a high schooler or middle schooler passionate about healthcare, innovation, and eager to shape the future of medicine? Join us at our <strong>Innovative Healthcare Solutions Hackathon & Expo.</strong>
-                    </p>
-                    <p class="medveda-about-para">
-                        <u>Date:</u> January 27th, 2024<br>
-                        <u>Time:</u> 1:00 PM - 6:30 PM<br>
-                        <u>Venue:</u> Heritage Park Community Center; 14301 Yale Ave &, Walnut Ave, Irvine, CA 92604<br>
-                        <a class="aesthetic-button" href="https://form.jotform.com/233426488964167" target="_blank">Registration Form</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-
-</html>                          
-<head>
-    <title>Event Logistics and Prizes</title>
+        .countdown-container div {
+            margin: 0 10px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-    <div align="center">
-        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRzosGAR8mQ8XlfgV_tAeFkXCS0Xg3Idub407YVBQnutIShq_olTIVcA-tRzPzBrwcZGbRSgL9MwsGv/embed?start=true&loop=true&delayms=3000" frameborder="0" width="900" height="450" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-    </div>
+    <!-- Countdown Timer Section -->
+    <div id="countdown" class="countdown-container"></div>
+
+    <script>
+        const eventDate = new Date('2024-01-27T12:00:00');
+
+        function updateCountdown() {
+            const currentDate = new Date();
+            const timeLeft = eventDate - currentDate;
+
+            if (timeLeft <= 0) {
+                document.getElementById('countdown').innerHTML = 'The event has started!';
+            } else {
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                document.getElementById('countdown').innerHTML = `
+                    <div>${days} days</div>
+                    <div>${hours} hours</div>
+                    <div>${minutes} minutes</div>
+                    <div>${seconds} seconds</div>
+                `;
+            }
+        }
+
+        // Update the countdown every second
+        setInterval(updateCountdown, 1000);
+
+        // Initial call to display the countdown immediately
+        updateCountdown();
+    </script>
 </body>
 </html>
-     </li>
- </ul>  
 
 </div>                           
 <p class="medveda-about-para">
