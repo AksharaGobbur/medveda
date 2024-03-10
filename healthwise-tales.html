@@ -26,14 +26,73 @@
     <script src="js/custom-script.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
 
-  <style>
-    .quote {
-      text-align: center;
-      margin-top: 0px; 
-      margin-bottom: 10px;
-    }
-  </style>
-    
+    <style>
+        .quote {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            color: #333;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #e91e63;
+        }
+
+        .section p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .faq .accordion-button {
+            background-color: #f8f9fa;
+            color: #333;
+            font-size: 1.1rem;
+            padding: 15px 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .faq .accordion-button:not(.collapsed) {
+            background-color: #e91e63;
+            color: #fff;
+        }
+
+        .faq .accordion-body {
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .footer-useful-links-ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-useful-links-ul li a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-useful-links-ul li a:hover {
+            color: #e91e63;
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .accordion-button::after {
+                transition: transform 0.3s ease;
+            }
+
+            .accordion-button:not(.collapsed)::after {
+                transform: rotate(180deg);
+            }
+        }
+    </style>
 </head>
 <body>
     <img src="media/images/Banner.jpg" alt="Healthwise Tales" style="width: 100%;">
@@ -117,7 +176,7 @@
                                     </div>
                                 </section>
                             </div>
-                            <section id="faq" class="faq section-bg">
+                            <section id="faq" class="faq section-bg col-md-6">
                                 <div class="container" data-aos="fade-up">
                                     <div class="section-title">
                                         <h2>Frequently Asked Questions</h2>
@@ -183,106 +242,72 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="accordion-item">
-                                            <h3 class="accordion-header" id="question6">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer6" aria-expanded="false" aria-controls="answer6">
-                                                    How can I stay updated with Healthwise Tales news and events?
-                                                </button>
-                                            </h3>
-                                            <div id="answer6" class="accordion-collapse collapse" aria-labelledby="question6" data-bs-parent="#accordionExample">
-                                                <div class="accordion-body">
-                                                    You can stay updated with Healthwise Tales news and events by following us on Instagram. We regularly post about our upcoming stories, books, and storytelling sessions, so you'll always be in the loop with our latest updates and activities.
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-            <section>
-                <footer class="text-center">
-                    <div class="footer_above">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="footer-col col-md-4">
-                                    <h3>Usefull Links</h3>
-                                    <ul class="footer-useful-links-ul">
-                                        <li> <p><a class="nav-link"
-                                                    aria-current="page"
-                                                    href="index.html">Home</a></p></li>
-                                        <li><p><a class="nav-link"
-                                                    href="about-us.html">About
-                                                    Us</a></p></li>
-                                                    <li><p><a class="nav-link" href="our-team.html">Our Team</a></p></li>
-                                        <li><p><a class="nav-link"
-                                                    href="events.html">Events</a></p></li>
-                                        <li> <p><a class="nav-link"
-                                                    href="contact-us.html">Contact
-                                                    us</a></p></li>
-                                    </ul>
-                                    <!-- <p><a class="nav-link" aria-current="page" href="index.html">Home</a></p>
-                                    <p><a class="nav-link" href="about-us.html">About</a></p>
-                                    <p><a class="nav-link" href="events.html">Events</a></p>
-                                     <p><a class="nav-link" href="contact-us.html">Contact us</a></p> -->
-                                </div>
-                                <div class="footer-col col-md-4">
-                                    <h3>Meet Us Socially</h3>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <a href="https://twitter.com"
-                                                target="_blank"
-                                                class="btn-social btn-outline"><i
-                                                    class="fa fa-fw fa-twitter"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="http://www.linkedin.com/in"
-                                                target="_blank"
-                                                class="btn-social btn-outline"><i
-                                                    class="fa fa-fw fa-linkedin"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.youtube.com/@MedVedaInc."
-                                                target="_blank"
-                                                class="btn-social btn-outline"><i
-                                                    class="fa fa-fw fa fa-youtube-play"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.instagram.com/medvedainc/?hl=en"
-                                                target="_blank"
-                                                class="btn-social btn-outline"><i
-                                                    class="fa fa-fw fa fa-instagram"></i></a>
-                                        </li>
-
-                                    </ul>
-                                </div>
-                                <div class="footer-col col-md-4">
-                                    <h3>Location</h3>
-                                    <p>140121ST STER SACRAMENTO,</p>
-                                    <p>CA 95811</p>
-                                    <p>Email: medvedaorg@gmail.com</p>
-                                    <p>Phone : +1 000 000 0000</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer_below">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <p>Copyright © 2023 MedVeda - All Rights
-                                        Reserved.</p>
-                                    <!-- <p>All <span><i class="fa fa-copyright"></i></span> Copyright Reserved : 2023</p> -->
-                                </div>
-                                <div class="col-lg-6">
-                                    <p class="float-center"><a href="#">Back to
-                                            top <span><i class="fa fa-arrow-up"></i></span></a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
-            </section>
+                                        <divclass="accordion-item">
+                                           <h3 class="accordion-header" id="question6">
+                                               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer6" aria-expanded="false" aria-controls="answer6">
+                                                   How can I stay updated with Healthwise Tales news and events?
+                                               </button>
+                                           </h3>
+                                           <div id="answer6" class="accordion-collapse collapse" aria-labelledby="question6" data-bs-parent="#accordionExample">
+                                               <div class="accordion-body">
+                                                   You can stay updated with Healthwise Tales news and events by following us on Instagram. We regularly post about our upcoming stories, books, and storytelling sessions, so you'll always be in the loop with our latest updates and activities.
+                                               </div>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </section>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+       <footer class="text-center">
+           <div class="footer_above">
+               <div class="container-fluid">
+                   <div class="row">
+                       <div class="footer-col col-md-4">
+                           <h3>Useful Links</h3>
+                           <ul class="footer-useful-links-ul">
+                               <li><p><a class="nav-link" aria-current="page" href="index.html">Home</a></p></li>
+                               <li><p><a class="nav-link" href="about-us.html">About Us</a></p></li>
+                               <li><p><a class="nav-link" href="our-team.html">Our Team</a></p></li>
+                               <li><p><a class="nav-link" href="events.html">Events</a></p></li>
+                               <li><p><a class="nav-link" href="healthwise-tales.html">Healthwise Tales</a></p></li>
+                               <li><p><a class="nav-link" href="med-hacks.html">Med Hacks</a></p></li>
+                               <li><p><a class="nav-link" href="contact-us.html">Contact us</a></p></li>
+                               <li><p><a class="nav-link" href="founder-bio.html">Founder Bio</a></p></li>
+                           </ul>
+                       </div>
+                       <div class="footer-col col-md-4">
+                           <h3>Follow Us</h3>
+                           <div class="social-links">
+                               <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                               <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+                               <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                               <a href="#" class="linkedin"><i class="fab fa-linkedin"></i></a>
+                           </div>
+                       </div>
+                       <div class="footer-col col-md-4">
+                           <h3>Subscribe to our newsletter</h3>
+                           <form>
+                               <input type="email" placeholder="Enter your email">
+                               <button type="submit">Subscribe</button>
+                           </form>
+                       </div>
+                   </div>
+               </div>
+           </div>
+           <div class="footer_below">
+               <div class="container-fluid">
+                   <div class="row">
+                       <div class="col-md-12">
+                           <p>&copy; 2023 Med Veda Inc. All rights reserved.</p>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </footer>
+   </main>
+</body>
+</html>
