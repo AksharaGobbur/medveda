@@ -241,7 +241,6 @@
                     <div class="quote">
                         <p>"Storytelling is the most powerful way to put ideas into the world today" - Robert McKee</p>
                     </div>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -263,11 +262,10 @@ body {
 }
 
 .countdown-box {
-    display: inline-block;
-    margin: 0 10px;
-    padding: 20px;
     border: 2px solid #f5a623;
     border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
@@ -307,7 +305,7 @@ body {
         let stories = 0;
 
         const updateCounts = () => {
-            const animationDuration = 3000;
+            const animationDuration = 2000;
             const childrenTarget = 60;
             const storiesTarget = 3;
             const animationStep = 1;
@@ -334,7 +332,7 @@ body {
             }, animationStep);
         };
 
-        setTimeout(updateCounts, 1000);
+        updateCounts();
     });
 </script>
 </body>
