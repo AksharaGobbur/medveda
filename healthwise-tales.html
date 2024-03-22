@@ -273,10 +273,9 @@
 </head>
 <body>
 <div class="container">
-    <div class="counter" id="childrenCounter">0 children motivated</div>
-    <button class="button" onclick="incrementChildren()">Increase Children</button>
-    <div class="counter" id="storiesCounter">0 stories made</div>
-    <button class="button" onclick="incrementStories()">Increase Stories</button>
+    <div class="counter" id="childrenCounter">60 children motivated</div>
+    <div class="counter" id="storiesCounter">2 stories made</div>
+
 </div>
 
 <script>
@@ -288,15 +287,6 @@
         document.getElementById("storiesCounter").innerHTML = storiesCount + " stories made";
     }
 
-    function incrementChildren() {
-        childrenCount++;
-        updateCounters();
-    }
-
-    function incrementStories() {
-        storiesCount++;
-        updateCounters();
-    }
 </script>
 </body>
 </html>
