@@ -241,30 +241,73 @@
                     <div class="quote">
                         <p>"Storytelling is the most powerful way to put ideas into the world today" - Robert McKee</p>
                     </div>
+
+</script>
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Countdown Timer</title>
+    <style>
+        /* CSS styles for countdown */
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        .countdown-container div {
+            margin: 0 10px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="countdown" class="countdown-container"></div>
+
+    <script>
+        const eventDate = new Date('2024-05-27T12:00:00Z'); // Event date in UTC
+
+        function updateCountdown() {
+            const pstOffset = -8 * 60 * 60 * 1000; // PST offset in milliseconds
+            const currentDate = new Date().getTime() - pstOffset; // Current time adjusted for PST
+            const timeLeft = eventDate.getTime() - currentDate;
+
+            if (timeLeft <= 0) {
+                document.getElementById('countdown').innerHTML = 'The event has ended!';
+            } else {
+                const days = Math.ceil(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                document.getElementById('countdown').innerHTML = `
+                    <div>${days} days</div>
+                    <div>${hours} hours</div>
+                    <div>${minutes} minutes</div>
+                    <div>${seconds} seconds</div>
+                `;
+            }
+        }
+
+        // Update the countdown every second
+        setInterval(updateCountdown, 1000);
+
+        // Initial call to display the countdown immediately
+        updateCountdown();
+    </script>
+</body>
+</html>
+                    
                     <div class="col-md-12 d-flex justify-content-center align-items-center">
                         <a href="https://hcb.hackclub.com/donations/start/med-veda-inc" class="btn btn-primary">Support Us</a>
                     </div>
-<script>
-    var childrenCount = 0;
-    var storiesCount = 0;
-
-    function updateCounters() {
-        document.getElementById("childrenCounter").innerHTML = childrenCount;
-        document.getElementById("storiesCounter").innerHTML = storiesCount;
-    }
-
-    // Initial update
-    updateCounters();
-
-    // Simulate an increase in children and stories over time
-    setInterval(function() {
-        childrenCount += Math.floor(Math.random() * 3) + 1; // Increase by 1 to 3
-        storiesCount += Math.floor(Math.random() * 2) + 1; // Increase by 1 to 2
-        updateCounters();
-    }, 3000); // Update every 3 seconds
-</script>
-</body>
-</html>
 
 <div class="slideshow-container">
   <div class="slides">
