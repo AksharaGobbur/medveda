@@ -246,54 +246,97 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Counters</title>
+<title>Healthwise Tales</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-    }
-    .container {
-        text-align: center;
-        margin-top: 50px;
-    }
-    .counter {
-        font-size: 24px;
-        margin-bottom: 20px;
-    }
-    .button {
-        font-size: 16px;
-        margin: 5px;
-        padding: 5px 10px;
-        cursor: pointer;
-        border: 1px solid #333;
-        background-color: #f1f1f1;
-    }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.countdown-box {
+    border: 2px solid #f5a623;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.countdown-number {
+    font-size: 36px;
+    font-weight: bold;
+    color: #f5a623;
+}
+
+.countdown-text {
+    font-size: 16px;
+    color: #333;
+}
 </style>
 </head>
 <body>
 <div class="container">
-    <div class="counter" id="childrenCounter">60 Children Motivated</div>
-    <div class="counter" id="storiesCounter">2 Stories Made</div>
-
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Our Impact</h2>
+            <div class="countdown-box">
+                <div class="countdown-number" id="children-count">0</div>
+                <div class="countdown-text">Children Motivated</div>
+            </div>
+            <div class="countdown-box">
+                <div class="countdown-number" id="stories-count">0</div>
+                <div class="countdown-text">Stories Made</div>
+            </div>
+        </div>
+    </div>
 </div>
-
 <script>
-    var childrenCount = 0;
-    var storiesCount = 0;
+    document.addEventListener('DOMContentLoaded', function () {
+        const childrenCount = document.getElementById('children-count');
+        const storiesCount = document.getElementById('stories-count');
+        let children = 0;
+        let stories = 0;
 
-    function updateCounters() {
-        document.getElementById("childrenCounter").innerHTML = childrenCount + " children motivated";
-        document.getElementById("storiesCounter").innerHTML = storiesCount + " stories made";
-    }
+        const updateCounts = () => {
+            const animationDuration = 2000;
+            const childrenTarget = 60;
+            const storiesTarget = 3;
+            const animationStep = 1;
 
+            const childrenStep = Math.ceil(childrenTarget / (animationDuration / animationStep));
+            const storiesStep = Math.ceil(storiesTarget / (animationDuration / animationStep));
+
+            const childrenInterval = setInterval(() => {
+                children += childrenStep;
+                if (children >= childrenTarget) {
+                    children = childrenTarget;
+                    clearInterval(childrenInterval);
+                }
+                childrenCount.innerHTML = children;
+            }, animationStep);
+
+            const storiesInterval = setInterval(() => {
+                stories += storiesStep;
+                if (stories >= storiesTarget) {
+                    stories = storiesTarget;
+                    clearInterval(storiesInterval);
+                }
+                storiesCount.innerHTML = stories;
+            }, animationStep);
+        };
+
+        updateCounts();
+    });
 </script>
 </body>
 </html>
-                    
-                    <div class="col-md-12 d-flex justify-content-center align-items-center">
-                        <a href="https://hcb.hackclub.com/donations/start/med-veda-inc" class="btn btn-primary">Support Us</a>
-                    </div>
 
 <div class="slideshow-container">
   <div class="slides">
