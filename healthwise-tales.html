@@ -283,12 +283,16 @@ body {
     text-align: center;
 }
 
+.countdown-container {
+    display: flex;
+    justify-content: space-between;
+}
+
 .countdown-box {
-    display: inline-block;
-    margin: 0 10px;
-    padding: 20px;
     border: 2px solid #f5a623;
     border-radius: 10px;
+    padding: 20px;
+    width: 45%;
     text-align: center;
 }
 
@@ -306,57 +310,54 @@ body {
 </head>
 <body>
 <div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <h2>Our Impact</h2>
-            <div class="countdown-box">
-                <div class="countdown-number" id="children-count">0</div>
-                <div class="countdown-text">Children Motivated</div>
-            </div>
-            <div class="countdown-box">
-                <div class="countdown-number" id="stories-count">0</div>
-                <div class="countdown-text">Stories Made</div>
-            </div>
+    <div class="countdown-container">
+        <div class="countdown-box">
+            <div class="countdown-number" id="children-count">0</div>
+            <div class="countdown-text">Children Motivated</div>
+        </div>
+        <div class="countdown-box">
+            <div class="countdown-number" id="stories-count">0</div>
+            <div class="countdown-text">Stories Made</div>
         </div>
     </div>
 </div>
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const childrenCount = document.getElementById('children-count');
-        const storiesCount = document.getElementById('stories-count');
-        let children = 0;
-        let stories = 0;
+document.addEventListener('DOMContentLoaded', function () {
+    const childrenCount = document.getElementById('children-count');
+    const storiesCount = document.getElementById('stories-count');
+    let children = 0;
+    let stories = 0;
 
-        const updateCounts = () => {
-            const animationDuration = 3000;
-            const childrenTarget = 60;
-            const storiesTarget = 3;
-            const animationStep = 1;
+    const updateCounts = () => {
+        const animationDuration = 2000;
+        const childrenTarget = 60;
+        const storiesTarget = 3;
+        const animationStep = 1;
 
-            const childrenStep = Math.ceil(childrenTarget / (animationDuration / animationStep));
-            const storiesStep = Math.ceil(storiesTarget / (animationDuration / animationStep));
+        const childrenStep = Math.ceil(childrenTarget / (animationDuration / animationStep));
+        const storiesStep = Math.ceil(storiesTarget / (animationDuration / animationStep));
 
-            const childrenInterval = setInterval(() => {
-                children += childrenStep;
-                if (children >= childrenTarget) {
-                    children = childrenTarget;
-                    clearInterval(childrenInterval);
-                }
-                childrenCount.innerHTML = children;
-            }, animationStep);
+        const childrenInterval = setInterval(() => {
+            children += childrenStep;
+            if (children >= childrenTarget) {
+                children = childrenTarget;
+                clearInterval(childrenInterval);
+            }
+            childrenCount.innerHTML = children;
+        }, animationStep);
 
-            const storiesInterval = setInterval(() => {
-                stories += storiesStep;
-                if (stories >= storiesTarget) {
-                    stories = storiesTarget;
-                    clearInterval(storiesInterval);
-                }
-                storiesCount.innerHTML = stories;
-            }, animationStep);
-        };
+        const storiesInterval = setInterval(() => {
+            stories += storiesStep;
+            if (stories >= storiesTarget) {
+                stories = storiesTarget;
+                clearInterval(storiesInterval);
+            }
+            storiesCount.innerHTML = stories;
+        }, animationStep);
+    };
 
-        setTimeout(updateCounts, 1000);
-    });
+    updateCounts();
+});
 </script>
 </body>
 </html>
