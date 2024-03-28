@@ -324,6 +324,46 @@ body {
         </div>
     </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const childrenCount = document.getElementById('children-count');
+    const storiesCount = document.getElementById('stories-count');
+    let children = 0;
+    let stories = 0;
+
+    const updateCounts = () => {
+        const animationDuration = 9000;
+        const childrenTarget = 99;
+        const storiesTarget = 5;
+        const animationStep = 2;
+
+        const childrenStep = Math.ceil(childrenTarget / (animationDuration / animationStep));
+        const storiesStep = Math.ceil(storiesTarget / (animationDuration / animationStep));
+
+        const childrenInterval = setInterval(() => {
+            children += childrenStep;
+            if (children >= childrenTarget) {
+                children = childrenTarget;
+                clearInterval(childrenInterval);
+            }
+            childrenCount.innerHTML = children;
+        }, animationStep);
+
+        const storiesInterval = setInterval(() => {
+            stories += storiesStep;
+            if (stories >= storiesTarget) {
+                stories = storiesTarget;
+                clearInterval(storiesInterval);
+            }
+            storiesCount.innerHTML = stories;
+        }, animationStep);
+    };
+
+    updateCounts();
+});
+</script>
+    
                     <div class="slideshow-container">
                         <div class="slides fade">
                             <img src="https://cdn.discordapp.com/attachments/1026587602435969034/1220873148631617657/unknown3.png?ex=661085b9&is=65fe10b9&hm=435a6f976cabe679e056683a89edef3ba5a6da59b9f5dc11fd27962e6084e40e&" alt="Image 1">
