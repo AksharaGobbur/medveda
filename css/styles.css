@@ -224,10 +224,12 @@ body::-webkit-scrollbar-thumb {
     }
 
     .medveda-card-tile-block{
-        border: 2px dashed #4e888f;
-        padding: 10px 10px;
+        background-color: #0071ce;
+        padding: 10px;
         border-radius: 6px;
         margin-bottom: 20px;
+        box-shadow: 3px 3px 2px 0px #929ba4;
+        color: #ffffff;
     }
 
     .medveda-card-tile-img{
@@ -240,8 +242,8 @@ body::-webkit-scrollbar-thumb {
     .medveda-card-tile-img img{
         width: 200px;
         height: 200px;
-        border-radius: 100px;
-    
+        border-radius: 100%;
+        background-color: #eaeaea;
     }
 
     .medveda-card-tile-block h5{
@@ -250,6 +252,11 @@ body::-webkit-scrollbar-thumb {
         justify-content: center;
         padding: 10px 0;
         margin: 0;
+        color: #ffdd00;
+    }
+
+    .medveda-card-tile-block p small {
+        color: #cccccc;
     }
 
     .medveda-card-tile-block .medveda-card-btn{
